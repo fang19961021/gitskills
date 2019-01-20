@@ -16,5 +16,19 @@ rr<!DOCTYPE html>
 		return arr;
 	}
 	console.log(reverseArray([1,2,3,4,5]))
+	function sortArray(arr){
+		for(var i = 0;i < arr.length - 1; i++){
+			//控制每一轮的次数
+			for(var j = 0; j < arr.length - 1 - i; j++){
+				if(arr[j] > arr[j + 1]){
+					var temp = arr[j];
+					arr[j] = arr[j + 1];
+					arr[j + 1 ] = temp;
+				}//end if
+			}//end for
+		}//end for
+		return arr;
+	}
+	console.log(sortArray([0,19,34,10,100,2]));
 </script>
 </html>
