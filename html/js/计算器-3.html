@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="<%=basePath%>">
+    <meta charset="UTF-8">
+    <title>计算器</title>
+    <style>
+body{
+    font-size:12px;  
+    font-family:"微软雅黑";
+    color:#666;
+}
+*{  
+    padding:0px;
+    margin:0px;   
+}
+#cac{   
+    width:830px;
+    height:500px;
+    background:#f2f2f2;
+    margin:0 auto;
+    padding:10px;
+}
+#cac .c_show .s_text{
+    width:810px;
+    height:42px;
+    border:none;
+    line-height:42px;
+    text-align:right;
+    padding-right:20px;
+    font-size:34px;
+    color:#9e9e9e;
+}
+#cac h2{    
+    font-size:16px;
+    color:#000;
+    font-weight:500;
+    padding:12px 0 12px 20px;
+    cursor:move;
+}
+#cac .c_key ul{ 
+    border:3px solid #fff;
+    overflow:auto;
+    margin:10px auto;
+}
+#cac .c_key ul li{  
+    float:left;
+    width:140px;
+    height:65px;
+    background:#eaeaea;
+    margin:11px;
+    text-align:center;
+    line-height:65px;
+    font-size:32px;
+    cursor:pointer;
+    list-style:none;
+    border:1px solid #fff;
+}
+#cac .c_key ul .c_tool{ 
+    background:#738fd8;
+    color:#fff;
+}
+#cac .c_key ul .c_result{   
+    background:#f90;
+    color:#fff;
+}
+#cac .c_key ul li:hover{    
+    background:#fff;
+    color:#000;
+}
+</style></head>
+<body>
+    <div id="cac">
+        <h2>计算器</h2>
+        <div class="c_show">
+            <input type="text" class="s_text" onfocus="this.blur();" value="0" id="result">
+        </div>
+        <div class="c_key">
+            <ul>
+                <li onclick="command(7);">7</li>
+                <li onclick="command(8);">8</li>
+                <li onclick="command(9);">9</li>
+                <li class="c_tool" onclick="del('j')">←</li>
+                <li class="c_tool" onclick="clearzero('j')">c</li>
+
+                <li onclick="command(4);">4</li>
+                <li onclick="command(5);">5</li>
+                <li onclick="command(6);">6</li>
+                <li class="c_tool" onclick="tools('*','g')">×</li>
+                <li class="c_tool" onclick="tools('/','g')">÷</li>
+
+                <li onclick="command(1);">1</li>
+                <li onclick="command(2);">2</li>
+                <li onclick="command(3);">3</li>
+                <li class="c_tool" onclick="tools('+','g');">+</li>
+                <li class="c_tool" onclick="tools('-','g');">-</li>
+                <li onclick="command(0);">0</li>
+                <li onclick="command(0);">00</li>
+                <li onclick="dot('g')">.</li>
+                <li class="c_tool" onclick="tools('%','g');">%</li>
+                <li class="c_result" onclick="equal('j');">=</li>
+            </ul>
+        </div>
+            <div>计算器</div>
+    </div>
+</body>
+<script>
+    //获取一下id 
+    var resultDom = document.getElementById("result");
+    //点击计算器执行函数
+    function command(num){  
+        var str = resultDom.value;
+        str = (str == "0" ? "":str);
+        str += num;
+        resultDom.value = str;
+    }
+    function tools(p,m){    
+        if(operate){    
+            var num = resultDom.value;
+            num = (num == "0" ? "":num);
+            resultDom.value = num + p;
+            operate = false;
+        }
+    }
+    function equal(m){  
+        var result = resultDom.value;
+        var r = eval(result);
+        resultDom.value =r;
+    }
+    function clearzero(){   
+        resultDom.value=0;
+
+    }
+function del(m){
+
+        var str = resultDom.value;
+
+        str = str.substring(0,str.length - 1);
+        str = (str == "" ? 0 : str);
+
+
+        resultDom.value = str;
+
+
+    }
+</script>
+</html>

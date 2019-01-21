@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="checkbox" id="c">
+</body>
+<script src="jquery.js"></script>
+<script>
+	$("#c").click(
+		function(){
+			if(this.checked == true){
+				alert("中了")
+			} else{
+				alert("没中")
+			}
+		})
+</script>
+</html>

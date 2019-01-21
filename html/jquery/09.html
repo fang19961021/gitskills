@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p><input type="text" name="form111" value="Email..."></p>
+	<p><input type="text" name="form222" value="账号"></p>
+</body>
+<script src="jquery.js"></script>
+<script>
+	/*var inps = document.getElementsByName("form111")[0];
+	inps.onmouseover = function(){
+           this.focus();
+           this.value = ""
+	}*/
+	$("input[name=form222]").mouseover(function(){
+		$(this).focus();
+		$(this).val("")
+	})
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<img  id="deng" src="./off.jpg" alt="" onclick="qie();">
+</body>
+<script src="jquery.js"></script>
+<script>
+	function qie(){
+		if($('img').attr("src").indexOf('on')>=0){
+			$("img").attr("src","./off.jpg")  
+		}else{
+			$("img").attr("src","./on.jpg")  
+		}
+	}
+	function deng(){
+		var deng = document.getElementById("deng")
+		if(deng.src.indexOf("on")>=0){
+			deng.src = './off.jpg';
+		}else{
+			deng.src = './on.jpg'
+		}
+	}
+</script>
+</html>

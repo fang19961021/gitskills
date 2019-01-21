@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<select name="pro" id="pro" onchange="bian();">
+		<option value="">请选择省</option>
+		<option value="1">湖北</option>
+		<option value="2">湖南</option>
+	</select>
+	<select name="city" id="city"></select>
+</body>
+<script>
+	function bian(){
+		var map = ['', ['武汉','荆州','咸宁','黄冈'] , ['长沙','衡阳','岳阳','常德']]
+		var pro = document.getElementById('pro');
+		var city = document.getElementById('city');
+		var citys = map[pro.value];
+
+		 for(var i=0, len=citys.length,str=''; i<len; i++ ){
+		 	str = str + '<option>' + citys[i] + '</option>';
+		 }
+		 city.innerHTML = str
+	}
+</script>
+</html>

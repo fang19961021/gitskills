@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" value="加" onclick="jia()">
+	<ul>
+		<li><a href="">春</a></li>
+		<li><a href="">夏</a></li>
+		<li><a href="">秋</a></li>
+	</ul>
+</body>
+<script> 
+function jia(){	
+	var ul = document.createElement('ul');
+	var a1 = document.createElement('a');
+	var text = document.createTextNode('这是a标签');
+	a1.href = '#';
+	a1.appendChild(text);
+	var li = document.createElement('li');
+	li.appendChild(a1);
+
+
+
+	var a2 = document.createElement('a');
+	var text2 = document.createTextNode('这是b标签');
+	a2.href = '#';
+	a2.appendChild(text2);
+	var li1 = document.createElement('li');
+	li1.appendChild(a2);
+
+
+
+
+	var a3 = document.createElement('a');
+	var text3 = document.createTextNode('这是c标签');
+	a3.href = '#';
+	a3.appendChild(text3);
+	var li2 = document.createElement('li');
+	li2.appendChild(a3);
+
+
+
+
+
+
+
+
+
+	ul.appendChild(li) ;
+	ul.appendChild(li1);
+	ul.appendChild(li2)
+	ul.setAttribute("text", "newli");
+    document.getElementsByTagName('ul')[0].innerHTML = ul
+}
+
+</script>
+</html>

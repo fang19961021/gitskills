@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>jQuery对象的遍历</h1>
+	<input type="button" value="反选" onclick="fan();">
+	<p><input type="checkbox" name="1 " id=""></p>
+	<p><input type="checkbox" name="2 " id=""></p>
+	<p><input type="checkbox" name="3 " id=""></p>
+	<p><input type="checkbox" name="4 " id=""></p>
+	<p><input type="checkbox" name="5 " id=""></p>
+	<p><input type="checkbox" name=" 6" id=""></p>
+	<p><input type="checkbox" name=" 7" id=""></p>
+</body>
+<script src="jquery.js"></script>
+<script>
+	/*function fan(){
+		var cbs = $("input:checkbox");
+		for( var i=0;i<cbs.length;i++){
+			if($(cbs[i]).prop("checked")){
+				$(cbs[i]).prop("checked" ,false)
+			} else {
+				$(cbs[i]).prop("checked", true)
+			}
+		}
+	}*/
+	/*function fan(){
+		$("input:checkbox").each(function(){
+			if($(this).prop("checked")){
+				$(this).prop("checked",false)
+			} else {
+				$(this).prop("checked",true)
+			}
+		})
+	}*/
+	function fan(){
+		$("input:checkbox").each(function(){
+			this.checked = !this.checked;
+		})
+	}
+</script>
+</html>

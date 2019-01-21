@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	    <form action="" method="post">
+        <p id="sta">用户名<input type="text" name="username"placeholder="请在这里输入用户名" onfocus="f1()" onblur="f2()"></p>
+
+        <p> Email <input type="text" name="email"placeholder="请输入邮箱"></p>      
+        <p>密码<input type="text" name="password"placeholder="请输入密码">至少6位</p>
+        <p>确认密码<input type="text" name="repassword"placeholder="请再次输入密码"></p>
+        <p><input type="submit" value="提交注册"></p>
+    </form>
+</body>
+<script>
+
+		var inps = document.getElementsByTagName('input');
+        var ps = document.getElementsByTagName('p')
+
+	function f1(){ 
+		inps[0].style.border = '1px solid blue';
+		var a = document.createElement('a')
+		var p = document.getElementsByTagName('p')[0]
+	    var yong = document.createTextNode('用户名由6-18位的字母数字下划线组成，不能由数字开头')
+	    a.appendChild(yong)
+        p.appendChild(a);
+        var count = document.getElementById("sta").getElementsByTagName("a").length
+        if(count > 1){
+        	p.removeChild(p.lastChild);
+        }
+        
+	}
+	function f2(){
+		var a = document.getElementsByTagName('a')
+
+		inps[0].style.border = '1px solid '
+        ps[0].removeChild(ps[0].lastChild)
+	}
+         
+</script>
+</html>

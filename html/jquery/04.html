@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>Email:<input type="text" name="email"></p>
+	<p>密码：<input type="text" name="password"></p>
+	<p>重复密码：<input type="text" name="repassword"></p>
+	<p>学号：<input type="text" name="stunum"></p>
+	<p>学分：<input type="text" name="stuscore"></p>
+	<p><input type="password" ></p>
+</body>
+<script src="jquery.js"></script>
+<script>
+	$("input[type=password]").css("background","gray")
+	$("input[name=email]").css("background","blue ");
+	$("input[name^=stu]").css("background","green")
+	$("input[name$=word]").css("background","orange")
+</script>
+</html>

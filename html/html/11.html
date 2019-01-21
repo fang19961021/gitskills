@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+body{
+	background: rgb(125,125,125)
+}
+	#test1{
+		width: 100px;
+		height: 100px;
+		border:1px solid blue;
+		border-radius:50px;
+	}
+		#test2{
+		width: 100px;
+		height: 50px;
+		border:1px solid blue;
+		border-radius:50px 50px 0 0;
+	}
+     #test3{
+     	width: 100px;
+     	height: 100px;
+     	border:100px solid #000;
+     	border-radius:150px;
+     }
+     #test4{
+     	width: 0;
+     	height: 150px;
+     	border-left: 75px solid #000;
+     	border-right: 75px solid #fff;
+     	border-radius:150px;
+
+     }
+     #test4::before{
+     	content:"";
+     	display: block;
+     	width: 25px;
+     	height: 25px;
+     	right:43px;
+     	border:25px solid #000;
+     	border-radius:50px;
+        margin-left:  -43px;
+     	background:#fff;
+     }
+     #test4::after{
+     	content:'';
+     	display: block;
+     	width: 25px;
+     	height: 25px;
+        right:30px;
+     	background:#000;
+     	border:25px solid #fff;
+     	border-radius:50px;
+     	margin-left: -25px;
+
+     }
+</style>
+<body>
+	<div id="test1"></div>
+	<div id="test2"></div>
+	<div id="test3"></div>
+	<div id="test4">
+	</div>
+</body>
+</html>

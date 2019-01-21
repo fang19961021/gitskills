@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+		<style>	
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; } 
+body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; } 
+h1, h2, h3, h4, h5, h6{ font-size:100%; } 
+address, cite, dfn, em, var { font-style:normal; } 
+code, kbd, pre, samp { font-family:couriernew, courier, monospace; } 
+small{ font-size:12px; } 
+ul, ol { list-style:none; } 
+a { text-decoration:none; } 
+sup { vertical-align:text-top; } 
+sub{ vertical-align:text-bottom; } 
+legend { color:#000; } 
+fieldset, img { border:0; display: block;} 
+button, input, select, textarea { font-size:100%; } 
+table { border-collapse:collapse; border-spacing:0; }
+	</style>
+<style>
+    body{
+    	background: #efefef;
+    }
+	nav{
+		background: #222;
+	}
+	nav ul{
+		height: 60px;
+		width: 1100px;
+		margin: 0 auto;
+	}
+	header h1,header h4{
+        width: 1100px;
+        margin:0 auto;
+    }
+
+    header h1 {
+        font: 45px/56px '微软雅黑','黑体',sans-serif;
+    }
+
+    header h4{
+        color: #999999;
+        font: 19px/20px '新宋体','宋体',serif;
+    }
+
+	nav li{
+		float: left;
+	}
+	nav a{
+		display: block;
+		padding: 0px 20px;
+		line-height: 60px;
+		color: white;
+		font-size: 15px;
+	}
+	nav a:hover{
+		background: #3f3f3f; 
+	}
+	#main{
+		width: 1100px;
+		height: 920px; 
+
+		margin: 0 auto; 
+	}
+	#main::after{
+		content: '';
+		height: 0px;
+		display: block;
+		clear: both;
+	}
+	#lside{
+		width: 805px;
+		height: 400px;
+		float: left;
+
+	}
+	#rside{
+		width: 275px;
+		height: 400px;
+		float: right;
+
+	}
+	footer{
+		background: #222;
+		height: 65px;
+		box-sizing: border-box;
+		background: #222;
+		padding: 20px 0px;
+		
+		text-align: center;
+		color: white;
+		font: 17px/22.5px '微软雅黑','黑体',sans-serif;
+	}
+	aside{
+		background: white;
+		padding: 40px;
+		margin-bottom: 20px;
+	}
+	aside:first-child,article:first-child{
+		margin-top: 15px;
+	}
+	aside:last-child{
+		margin-bottom: 0px;
+	}
+	aside input {
+		border: 1px solid #ccc;
+		background: #fafafa;
+		padding:10px 15px ;
+		box-sizing: border-box;
+		font-size: 15px;
+		color: #666;
+		width: 100%;
+
+	}
+	aside h4{
+		color: black;
+		font:20px/24px '微软雅黑','黑体',sans-serif;
+		margin-bottom: 30px}
+	aside a,aside:visited {
+		color: #1e73be;
+		font:14px/20px '新宋体','宋体',serif; 
+	}
+	aside li{
+		margin-bottom: 6px;
+	}
+	aside a:hover{
+		color: black;
+	}
+	article{
+		background: white;
+		margin-bottom: 20px;
+		padding: 40px;
+	}
+	article h2{
+		font: 30px/36px "微软雅黑","黑体",sans-serif; 
+	}
+	article a,article:visitde{
+        color: #1e73be;
+	}
+	article a:hover{
+		color: black;
+	}
+	.entry_header,.entry_header a{
+        color: #666666;
+        font-size: 12px;
+
+	} 
+	.entry_header a:hover{
+		color: #1e73be;
+
+	}
+	.entry_content{
+		margin-top: 30px;
+		 font: 15px/25px "新宋体","宋体",serif;
+		color#3a3a3a;
+	}
+	article:last-of-type{
+		border: 1px solid blue;
+		margin-bottom: 0;
+	}
+	#pagebar{
+		color: #3a3a3a;
+		font:17px/22px "新宋体","宋体",serif;
+
+	}
+	#pagebar a ,#pagebar a:visited{
+		color: #1e73be;
+	}
+	#pagebar a:hover{
+		color: black;
+	}
+
+</style>	
+
+</head>
+<body>
+	<header>
+		<h1>十八哥的blog</h1>
+		<h4>乘风行，无惧</h4>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="">导航1</a></li>
+			<li><a href="">导航2</a></li>
+			<li><a href="">导航3</a></li>
+			<li><a href="">导航4</a></li>
+		</ul>
+	</nav>
+	<div id="main">
+		<div id="lside">
+			<article>
+				<h2>午后的街头</h2>
+				<div class="entry_header">
+					<time>2018/9/25</time>
+					by
+					<a href="#">方</a>
+					<a class="catlink" href="#">闲谈随笔</a>
+					<a class="comment" href="#">8条评论</a>
+				</div>
+				<div class="entry_content"></div>
+				<p>别再说，地铁太挤工作不易，<br>你可曾见过火车上肩扛手提，</p><p>许多我们叫爸的人拖着比自己都高的行李奔赴生计压力太大生活艰辛，<br>你可曾知道有人已经年逾古稀依然起早贪黑，只为解决一家温饱！</p><p>灯红酒绿索然无味，<br>你可曾想过穿梭城市的民工也许连一瓶矿泉水都狠拥有心珍惜！</p>
+			</article>
+						<article>
+				<h2>午后的街头</h2>
+				<div class="entry_header">
+					<time>2018/9/25</time>
+					by
+					<a href="#">方</a>
+					<a class="catlink" href="#">闲谈随笔</a>
+					<a class="comment" href="#">3条评论</a>
+				</div>
+				<div class="entry_content"></div>
+				<p>别再说，地铁太挤工作不易，<br>你可曾见过火车上肩扛手提，</p><p>许多我们叫爸的人拖着比自己都高的行李奔赴生计压力太大生活艰辛，<br>你可曾知道有人已经年逾古稀依然起早贪黑，只为解决一家温饱！</p><p>灯红酒绿索然无味，<br>你可曾想过穿梭城市的民工也许连一瓶矿泉水都狠拥有心珍惜！</p>
+			</article>			<article>
+				<h2>午后的街头</h2>
+				<div class="entry_header">
+					<time>2018/9/25</time>
+					by
+					<a href="#">方</a>
+					<a class="catlink" href="#">闲谈随笔</a>
+					<a class="comment" href="#">4条评论</a>
+				</div>
+				<div class="entry_content"></div>
+				<p>别再说，地铁太挤工作不易，<br>你可曾见过火车上肩扛手提，</p><p>许多我们叫爸的人拖着比自己都高的行李奔赴生计压力太大生活艰辛，<br>你可曾知道有人已经年逾古稀依然起早贪黑，只为解决一家温饱！</p><p>灯红酒绿索然无味，<br>你可曾想过穿梭城市的民工也许连一瓶矿泉水都狠拥有心珍惜！</p>
+			</article>
+			<div id="pagebar">
+				pages:&nbsp;
+				<a href="#">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				4
+				<a href="#">5</a>
+				<a href="#">6</a>
+			</div>
+		</div>
+		<div id="rside">
+			<aside>
+				<form action="">
+					<input type="text" name="search" placeholder="Search..">
+				</form>
+			</aside>
+			<aside>
+				<h4>
+					测试标题
+				</h4><ul>
+					<li><a href="">文章标题</a>&nbsp;（1）</li>
+					<li><a href="">文章标题</a>&nbsp;（5）</li>
+					<li><a href="">文章标题</a>&nbsp;（8）</li>
+					<li><a href="">文章标题</a>&nbsp;（2）</li>
+				</ul>
+			</aside>
+						<aside>
+				<h4>
+					测试标题
+				</h4><ul>
+					<li><a href="">文章标题1</a></li>
+					<li><a href="">文章标题2</a></li>
+					<li><a href="">文章标题3</a></li>
+					<li><a href="">文章标题4</a></li>
+				</ul>
+			</aside>			<aside>
+				<h4>
+					测试标题
+				</h4><ul>
+					<li><a href="">文章标题1</a></li>
+					<li><a href="">文章标题2</a></li>
+					<li><a href="">文章标题3</a></li>
+					<li><a href="">文章标题4</a></li>
+				</ul>
+			</aside>
+		</div>
+	</div>
+	<footer>
+		Copyright &copy; 2015 · GeneratePress · WordPress
+	</footer>
+</body>
+</html>

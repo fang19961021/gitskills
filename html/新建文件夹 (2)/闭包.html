@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	li{
+		width: 30px;
+		height: 30px;
+		background: blue;
+	}
+</style>
+<body>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+<script>
+	window.onload = function(){
+    var ul = document.getElementsByTagName("ul")[0];
+    var li = ul.getElementsByTagName("li");
+    for(var i=0;i<li.length;i++){
+        
+            li[i].onclick = function(){
+                console.log(i); //点击第几个返回第几个
+            }
+        
+    }
+}
+</script>
+</html>

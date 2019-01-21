@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base href="<%=basePath%>">
+	<meta charset="UTF-8">
+	<title>计算器</title>
+	<style>
+		body{
+			font: 30px "微软雅黑","黑体","sans-serif";
+			color: #666;
+    }
+    *{
+    	padding: 0px;
+    	margin: 0px;
+    }
+    #cac{
+    	width: 700px;
+    	height: 550px;
+    	background: #f2f2f2;
+    	margin: 0 auto;
+    	padding: 10px;
+    	border: 10px solid #1e73be;
+
+    }
+    .s_text{
+    	width: 680px;
+    	height: 42px;
+    	border: none;
+    	line-height: 42px;
+    	text-align: right;
+    	padding-right: 20px;
+    	font-size: 34px;
+    	color: #9e9e9e;
+    }
+    #cac h2{
+    	font-size: 16px;
+    	color: #000;
+    	font-weight: 500;
+    	padding: 12px 0px 12px 20px;
+    }
+    .c_key ul{
+    	border: 3px solid #fff;
+    	margin: 10px auto;
+    }    
+    .c_tool{
+    	background: #FFF68F;
+    	color: #f90;
+    	font:40px/45px;
+
+    }
+    .c_key ul li{
+    	float: left;
+    	width: 140px;
+    	height: 65px;
+    	background: #eaeaea;
+    	margin: 11px;
+    	text-align: center;
+    	line-height: 65px;
+    	font-size: 32px;
+    	list-style: none;
+    	border: 1px solid #60c7d2;
+         border-spacing: 0px;
+    }
+    .c_rade{
+    	background: #EAEAEA;
+    
+    }
+
+
+	</style>
+</head>
+<body >
+	<div id="cac">
+		<h2>计算器</h2>
+		<input type="text" class="s_text" onfocus="this.blur();"id ="result" value="0">
+		<div class="c_key">
+			<ul>
+				<li class="c_rade" onclick="command('c')">AC</li>
+				<li class="c_rade" onclick="command('/')">&plusmn;</li>
+				<li class="c_rade" onclick="command('%')">%</li>
+				<li class="c_tool" onclick="command('÷')">&divide;</li>
+				<li onclick="command(7)">7</li>
+				<li onclick="command(8)">8</li>
+				<li onclick="command(9)">9</li>
+				<li class="c_tool" onclick="command('x')">&times;</li>
+				<li onclick="command(4)">4</li>
+				<li onclick="command(5)">5</li>
+				<li onclick="command(6)">6</li>
+				<li class="c_tool" onclick="command('-')">-</li>
+				<li onclick="command(1)">1</li>
+				<li onclick="command(2)">2</li>
+				<li onclick="command(3)">3</li>
+				<li class="c_tool" onclick="command('+')">+</li>
+				<li onclick="command(0)">0</li>
+				<li onclick="command(0)">00</li>
+				<li onclick="command('.')">.</li>
+				<li class="c_result" onclick="qeual('j')">=</li>
+			</ul>
+	</div>
+</div>	
+</body>
+<script>
+    function command(v){
+        var resultDom = document.getElementById('result');
+        var res = document.getElementById("result").value
+        if(v =='c'){
+             document.getElementById("result").value = 0;
+             
+        }else 
+        
+        if(res==0){
+            document.getElementById("result").value = v
+        }else {
+            document.getElementById("result").value += v
+        }
+        
+    }
+    function reindex(str){
+            if(str.indexOf('x')!=-1){
+                return str.indexOf('x');
+            }else if(str.indexOf('÷')!=-1){
+                return str.indexOf('÷');
+                }else if(str.indexOf('+')!=-1){
+                    return str.indexOf('+');
+                    }else if(str.indexOf('-')!=-1){
+                    return str.indexOf('-');
+                    }
+        }
+   function qeual(){
+        var str= document.getElementById("result").value;
+        var index=reindex(str);
+        var num1=parseFloat(str.substr(0,index));
+        var    num2=parseFloat(str.substr(index+1));
+        if(str.indexOf('x')!=-1)
+        {
+            document.getElementById("result").value=num1*num2; 
+            }else if(str.indexOf('÷')!=-1){
+                document.getElementById("result").value=num1/num2; 
+                }else if(str.indexOf('+')!=-1){
+ 
+                document.getElementById("result").value=num1+num2;
+                }else if(str.indexOf('-')!=-1){
+
+                document.getElementById("result").value=num1-num2;
+                }
+
+        }
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+	console.log(window.a);
+	console.log(window.b);
+	console.log(window.c);
+
+	function t(){
+		var a = 'scope';
+		b = 'global';
+		
+
+		function t2(){
+			c = 3
+		}t2()
+	}
+	t();
+	
+
+	console.log(window.a);
+	console.log(window.b);
+	console.log(window.c);
+</script>
+</html>
