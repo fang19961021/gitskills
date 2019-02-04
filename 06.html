@@ -26,5 +26,23 @@
 		console.log(index);
 		index +=key.length;
 	}
+
+	var str3 = "whatOareYyouYnoYshaHleiHoHmyHgod";
+
+	str3 = str3.toLocaleLowerCase();
+
+	var obj = {};
+
+	for(var i= 0; i<str3.length;i++){
+		var key = str3[i];
+		if(obj[key]){
+			obj[key]++;
+		}else{
+			obj[key] = 1;
+		}
+	}
+	for(var key in obj ){
+		console.log(key +"这个字母出现了"+obj[key]+"次");
+	}
 </script>
 </html> 
