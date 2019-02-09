@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button"  value="显示效果" id= "btn">
+	<img src="images/cangjingkong.jpg" alt="哈哈" title="嘎嘎">
+</body>
+<script>
+	document.getElementById('btn').onclick = function (){
+		var imgobj = document.getElementsByTagName('img');
+		imgobj[0].alt = "改了";
+		imgobj.title = "现实吧 ";
+	}
+</script>
+</html>
