@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" value="点菜" id="btn">
+	<select name="" id="ss">
+		<option value="1">鱼香肉丝</option>
+		<option value="2">红烧肉</option>
+		<option value="3">清蒸排骨</option>
+		<option value="4" id="op1">糖醋里脊</option>
+		<option value="5">紫菜汤</option>
+	</select>
+
+	<textarea name="" id="tt" cols="30" rows="10" readonly="readonly">
+		注册用户的协议：
+		一年轻人问智者:“大师,昨晚我见一盲人打着灯笼走路。他明明看不见,打灯笼有何用
+	</textarea>
+	<input type="button" value="注册" id="btn2" >
+</body>
+<script>
+	function my$(id){
+		return document.getElementById(id)
+	}
+	my$("btn").onclick = function (){
+		my$("op1").selected = true;
+	}
+	my$("btn2").onclick = function (){
+		my$("tt").innerText = "哈哈";
+	}
+</script>
+</html>
