@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<a href="http://baidu.com" onclick="alert('哎呀我被点了')；return false">百度</a>
+	<a href="http://baidu.com" onclick="f1()"></a>
+	<a href="http://baidu.com" id="ak"></a>
+</body>
+<script>
+	function f1(){
+		alert("哇塞好厉害哦")
+	}
+	document.getElementById('ak').onclick = function(){
+		alert("嘎嘎");
+		return false;
+	}
+</script>
+</html>
