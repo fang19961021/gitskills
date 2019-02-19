@@ -1,1 +1,26 @@
-11.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>这是一个p</p>
+	<p class="cls">这是另一个p</p>
+	<span>这是一个span</span>
+	<span class="cls">这是另一个sapn</span>
+	<div>这是一个div</div>
+	<div class="cls">这是另一个span</div>
+	<input type="button" value="显示效果" id="btn">
+
+</body>
+<script src = "common.js"></script>
+<script>
+	my$("btn").onclick = function (){
+		var objs  = document.getElementsByClassName('cls')
+		for(var i = 0 ; i<objs.length;i++){
+			objs[i].style.backgroundColor = "purple";
+		}
+	}
+</script>
+</html>

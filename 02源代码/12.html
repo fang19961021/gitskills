@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	div{
+		 	width: 200px;
+		 	height: 150px;
+		 	background-color: green;
+		 	float: left;
+		 	margin-left: 10px;
+		 	border:2px solid green;
+	}
+</style>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+<script src = "common.js"></script>
+<script>
+	var divObjs = document.getElementsByTagName('div');
+	for(var i =0;i<divObjs.length;i++){
+		divObjs[i].onmouseover = function(){
+			this.style.border = "2px solid red";
+		}
+		divObjs[i].onmouseout = function(){
+			this.style. border = "";
+		}
+	}
+
+</script>
+</html>
