@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" value="创建p" id="btn">
+	<div id="dv"></div>
+</body>
+<script src="common.js"></script>
+<script>
+	my$("btn").onclick = function(){
+		 var pObj = document.createElement("P");
+		 setInnnerText(pObj,"这是一个p");
+		 my$("dv").appendChild(pObj)}
+</script>
+</html>
